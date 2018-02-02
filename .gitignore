@@ -12,3 +12,4 @@ erl_crash.dump
 .deliver/releases/
 .env
 .sobelow
+.DS_Store
