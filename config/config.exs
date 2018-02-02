@@ -5,16 +5,12 @@
 # is restricted to this project.
 use Mix.Config
 
-# General application configuration
-config :slimesoccer,
-  ecto_repos: [Slimesoccer.Repo]
-
 # Configures the endpoint
-config :slimesoccer, Slimesoccer.Endpoint,
+config :super_slime_game, SuperSlimeGameWeb.Endpoint,
   url: [host: "localhost"],
-  secret_key_base: "diEbndpac1oXttbGscv6Ta+dksE01h7tWwANzUopLzhNP6Movbb6uypx4V4g/TUA",
-  render_errors: [view: Slimesoccer.ErrorView, accepts: ~w(html json)],
-  pubsub: [name: Slimesoccer.PubSub,
+  secret_key_base: "6KAZU6Y4j7HdB7XDbMPo0WHLy7HpcLgCWtByszsSezwDzDBHRWzbaDViHn3f2Yl6",
+  render_errors: [view: SuperSlimeGameWeb.ErrorView, accepts: ~w(html json)],
+  pubsub: [name: SuperSlimeGame.PubSub,
            adapter: Phoenix.PubSub.PG2]
 
 # Configures Elixir's Logger

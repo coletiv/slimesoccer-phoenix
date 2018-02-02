@@ -8,13 +8,5 @@ use Mix.Config
 # file or create a script for recreating it, since it's
 # kept out of version control and might be hard to recover
 # or recreate for your teammates (or yourself later on).
-config :slimesoccer, Slimesoccer.Endpoint,
-  secret_key_base: "yGPB048puTctYqNN3uxUR8P17SAkcBY1YlZVWXnNrm8hVOWAOiB6nFj5i3kAAcCk"
-
-# Configure your database
-config :slimesoccer, Slimesoccer.Repo,
-  adapter: Ecto.Adapters.Postgres,
-  username: "postgres",
-  password: "postgres",
-  database: "slimesoccer_prod",
-  pool_size: 15
+config :super_slime_game, SuperSlimeGameWeb.Endpoint,
+  secret_key_base: "ZqQcx5lssRsiejGhpTyUSQN0b2Kq3HyZb1P+IEsiFAKXCkPBygNJI1oMKlf5QYcl"
