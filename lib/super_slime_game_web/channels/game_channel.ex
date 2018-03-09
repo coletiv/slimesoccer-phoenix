@@ -37,20 +37,9 @@ defmodule SuperSlimeGameWeb.GameChannel do
     {:error, Error.get(:resource_not_found)}
   end
 
-  # event PING
-  def handle_in("ping", _payload, socket) do
-    {:reply, {:ok, %{message: "pong"}}, socket}
+  def handle_in("playerAction", payload, socket) do
+    broadcast!(socket, "playerAction", Map.put(payload, :from_player, socket.assigns.player))
+    {:noreply, socket}
   end
 
-  def handle_in("jump", payload, socket) do
-    broadcast!(socket, "jump", Map.put(payload, :from_player, socket.assigns.player))
-  end
-
-  def handle_in("left", payload, socket) do
-    broadcast!(socket, "left", Map.put(payload, :from_player, socket.assigns.player))
-  end
-
-  def handle_in("right", payload, socket) do
-    broadcast!(socket, "right", Map.put(payload, :from_player, socket.assigns.player))
-  end
 end
