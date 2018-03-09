@@ -41,5 +41,4 @@ defmodule SuperSlimeGameWeb.GameChannel do
     broadcast!(socket, "playerAction", Map.put(payload, :from_player, socket.assigns.player))
     {:noreply, socket}
   end
-
 end
