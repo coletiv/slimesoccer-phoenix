@@ -7,6 +7,9 @@ defmodule SuperSlimeGameWeb.UserSocket do
   ## Transports - long polling
   transport(:websocket, Phoenix.Transports.WebSocket)
 
+  @doc """
+  Connect to channel
+  """
   def connect(_params, socket) do
     {:ok, socket}
   end

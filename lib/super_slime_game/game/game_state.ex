@@ -4,11 +4,6 @@ defmodule SuperSlimeGame.GameState do
     Allows to add new players to the board, move them and detect collisions.
   """
 
-  # @init_x_1 0
-  # @init_y_1 0
-  # @init_x_2 20
-  # @init_y_2 0
-
   @doc """
     Used by the supervisor to start the Agent that will keep the game state persistent.
     The initial value passed to the Agent is an empty map.
@@ -49,7 +44,6 @@ defmodule SuperSlimeGame.GameState do
   end
 
   # Game logic
-
   defp generate_new_game(code) do
     %{
       :id => code,
